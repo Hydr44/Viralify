@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SnappClip 🎬
 
-## Getting Started
+AI-powered video editing platform that automatically transforms long-form videos into viral clips optimized for TikTok, Instagram Reels, and YouTube Shorts.
 
-First, run the development server:
+## Features
 
+- 🎥 **Video Upload**: Drag & drop interface for easy video uploads
+- 🎙️ **AI Transcription**: Automatic audio transcription using OpenAI Whisper
+- ✂️ **Smart Splitting**: Intelligent video segmentation into engaging clips
+- ✨ **AI-Generated Copy**: Automatic titles, captions, and hashtags with GPT-4
+- 📱 **Social Media Ready**: Clips optimized for all major platforms
+- 🚀 **Fast Processing**: Efficient pipeline with real-time progress tracking
+
+## Tech Stack
+
+- **Frontend**: Next.js 14, React, TypeScript, TailwindCSS
+- **UI Components**: shadcn/ui
+- **AI**: OpenAI (Whisper, GPT-4)
+- **Video Processing**: FFmpeg
+- **Deployment**: Vercel
+
+## Prerequisites
+
+- Node.js 18+
+- FFmpeg installed (`brew install ffmpeg` on macOS)
+- OpenAI API key
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Create `.env.local` file:
+```bash
+OPENAI_API_KEY=your_openai_api_key_here
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Open [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Navigate to the dashboard
+2. Upload your video (max 30 minutes)
+3. Wait for AI processing (2-5 minutes)
+4. Review generated clips with titles and captions
+5. Download your clips
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/snappclip)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push to GitHub
+2. Import project on Vercel
+3. Add `OPENAI_API_KEY` environment variable
+4. Deploy!
+
+## License
+
+MIT
