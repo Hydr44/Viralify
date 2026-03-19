@@ -162,11 +162,13 @@ export default function Dashboard() {
                 className="hidden"
                 id="file-upload"
               />
-              <label htmlFor="file-upload">
-                <Button className="mt-6 bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600" asChild>
-                  <span>Choose File</span>
-                </Button>
-              </label>
+              <Button 
+                className="mt-6 bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600"
+                onClick={() => document.getElementById('file-upload')?.click()}
+                type="button"
+              >
+                Choose File
+              </Button>
             </div>
           </Card>
         )}
